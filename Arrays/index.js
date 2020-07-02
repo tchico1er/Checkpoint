@@ -40,8 +40,6 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 function pushString(arr) {
   // CODE HERE
-  arr = [...arr, "last element"]
-  return arr
 }
 
 /*
@@ -60,8 +58,6 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 function push(array, value) {
   // CODE HERE
-  array = [...array, value]
-  return array
 }
 
 /*
