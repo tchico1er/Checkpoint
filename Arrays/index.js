@@ -40,6 +40,7 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 function pushString(arr) {
   // CODE HERE
+  console.log(arr);
 }
 
 /*
