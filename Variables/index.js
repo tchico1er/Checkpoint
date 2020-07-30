@@ -14,7 +14,7 @@ EXAMPLE
 ASSIGN the variable named myFirstVariable with a string value
 
 */
-
+//exemple
 var exampleVariable;
 
 exampleVariable = 'I am a string';
@@ -27,6 +27,7 @@ ASSIGN the variable named myFirstVariable with the data type null
 */
 
 var myFirstVariable;
+myFirstVariable = null;
 
 /*
 QUESTION 2
@@ -36,7 +37,7 @@ Assign it to a BOOLEAN data type
 
 */
 
-var mySecondVariable;
+var mySecondVariable = false;
 
 // YOUR CODE HERE
 
@@ -47,7 +48,7 @@ ASSIGN mythirdVar to equal to a string with the text ==>  hello world
 
 */
 
-var myThirdVar;
+var myThirdVar = 'hello world';
 
 // YOUR CODE HERE
 
@@ -58,7 +59,7 @@ ASSIGN myFourthVar to equal to a string with the text ==> This Is Case Sensitive
 
 */
 
-var myFourthVar;
+var myFourthVar = 'This Is Case Sensitive';
 
 // YOUR CODE HERE
 
@@ -70,7 +71,7 @@ ASSIGN myAge to your age, use the number data type
 
 */
 
-var myAge;
+var myAge = 31;
 
 // YOUR CODE HERE
 
@@ -85,6 +86,7 @@ i.e. + - / *
 */
 
 var myAgeCalc = null;
+myAgeCalc = 3 * 10 +8 -7;
 
 // YOUR CODE HERE
 
@@ -100,7 +102,7 @@ refer to lecutre about expressions
 
 (1 + 5) * 4;
 
-var numExpression;
+var numExpression = 5;
 
 // YOUR CODE HERE
 
@@ -138,3 +140,4 @@ module.exports = {
 };
 
 console.log('');
+
