@@ -14,10 +14,11 @@ CREATE A FUNCTION THAT CONSOLE.LOGS hello world 3 times
 */
 
 function helloWorld3Times() {
-  for (var i = 0; i < 3; i++) {
-    console.log('hello world');
-  }
+    console.log("hello world")
+    console.log("hello world")
+    console.log("hello world")
 }
+
 
 /*
 QUESTION 1
@@ -28,9 +29,15 @@ CREATE A FUNCTION THAT ACCEPTS ONE ARGUMENT, THE NUMBER OF TIMES IT WILL CONSOLE
 */
 
 function dynamicHelloWorld(num) {
-  // CODE HERE
+  if(num < 1){
+    return ""
+  }else while(num > 0){
+    console.log('hello world');
+    num--;
+  }
+  
 }
-
+dynamicHelloWorld(5)
 /*
 QUESTION 2
 
@@ -39,9 +46,13 @@ CREATE A FUNCTION THAT ACCEPTS A STRING AND WILL LOG TO THE CONSOLE EACH CHARACT
 */
 
 function logEachChar(str) {
-  // CODE HERE
-}
+  for (var i = 0; i < str.length; i++) {
+    console.log(str.charAt(i));
+  }
+  }
+  
 
+logEachChar('This is QCC Checkpoint')
 /*
 QUESTION 3
 
@@ -53,10 +64,20 @@ e.g. checkIfCharExists('hello', 'l') ===> true
 
 */
 
-function checkIfCharExists(str, char) {
-  // CODE HERE
-}
+function checkIfCharExists(str , char) {
 
+  let str1 = str.split()
+  for(let i =0; i < str1.length; i++){ 
+  
+  if(!str1[i].includes(char[i])){
+    return false;
+  }else{
+    
+  }  
+  }
+  return true
+  }
+  checkIfCharExists("this is QCC checkpoint! " , "z")
 /*
 QUESTION 4
 
@@ -69,8 +90,19 @@ e.g. indexOf('hello', 'l') ===> 2
 
 function indexOf(str, char) {
   // CODE HERE
+    let index = 0
+    let str1 = str.split()
+    for(let i =0; i < str1.length; i++){ 
+    if(!str1[i].includes(char[i])){
+      return -1;
+    }else{
+      index += str1[i].indexOf(char)
+    }  
+    }
+    return index;
+    
 }
-
+indexOf("this is QCC checkpoint!", "t")
 /*
 QUESTION 5
 
@@ -101,8 +133,25 @@ FizzBuzz
 
 function fizzBuzz(num) {
   // CODE HERE
-}
+  let mul3 = 'Fizz'
+  let mul5 ='Buzz'
+  let mul3And5 = "fizzBuzz"
+  for(let i = 1; i <= num; i++){
+    if((i % 3 === 0 )){
 
+      console.log(i , mul3) 
+    }
+     if( i % 5 === 0){
+
+      console.log(i , mul5)
+     }
+    if((i % 3 === 0 && i % 5 === 0)){
+      console.log(i , mul3And5)
+    }
+    
+  }
+}
+fizzBuzz(15)
 /*
 QUESTION 6
 CREATE A FUNCTION THAT TAKES ONE ARGUMENTS, A NUMBER,  AND FIND'S THE   nth FIBONACCI NUMBER.
@@ -113,11 +162,13 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 
 */
 
-function fibonacci(n) {
-  // CODE HERE
-}
-
-console.log(fibonacci(5));
+function fibonacci(num){
+  // if(num ==1) {
+  // return 1;
+  // }
+  // return fibonacci(num - 2) + fibonacci(num - 3)
+  // }
+  fibonacci(7)
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
