@@ -15,9 +15,16 @@ CREATE A FUNCTION THAT TAKES A CALLBACK AND INVOKES THAT CALLBACK FUNCTION
 
 */
 
-function higherOrder(callback) {
+function higherOrder() {
   // CODE HERE
+  
 }
+
+function theCallBack(callback) { 
+  //callback()
+}
+theCallBack(higherOrder)
+
 
 /*
 QUESTION 2
@@ -28,7 +35,12 @@ CREATE A FUNCTION ACCEPTS ONE ARGUMENT, A CALLBACK THAT RETURNS THE RETURN VALUE
 
 function q2(callback) {
   // CODE HERE
+  return callback;
 }
+function q3(callback){
+  callback(callback)
+}
+q3(q2)
 
 /*
 QUESTION 3
@@ -42,7 +54,9 @@ USE A FOR-LOOP
 function forEach(array, callback) {
   // CODE HERE
 }
-
+function withTwoArgs(){
+  
+}
 /*
 QUESTION 4
 

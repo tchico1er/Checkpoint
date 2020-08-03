@@ -167,7 +167,7 @@ function fibonacci(num){
   // return 1;
   // }
   // return fibonacci(num - 2) + fibonacci(num - 3)
-  // }
+   }
   fibonacci(7)
 
 /*
@@ -196,4 +196,4 @@ module.exports = {
   fibonacci,
 };
 
-console.log('');
+console.log('')
