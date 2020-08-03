@@ -135,19 +135,18 @@ function fizzBuzz(num) {
   // CODE HERE
   let mul3 = 'Fizz'
   let mul5 ='Buzz'
-  let mul3And5 = "fizzBuzz"
+  let mul3And5 = "FizzBuzz"
   for(let i = 1; i <= num; i++){
-    if((i % 3 === 0 )){
-
-      console.log(i , mul3) 
-    }
-     if( i % 5 === 0){
-
-      console.log(i , mul5)
-     }
     if((i % 3 === 0 && i % 5 === 0)){
-      console.log(i , mul3And5)
+      console.log(mul3And5)
+    } else if( i % 5 === 0){
+      console.log(mul5)
+     } else if((i % 3 === 0 )) {
+      console.log(mul3) 
+    }else{
+      console.log(i)
     }
+    
     
   }
 }
@@ -163,10 +162,10 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 */
 
 function fibonacci(num){
-  // if(num ==1) {
-  // return 1;
-  // }
-  // return fibonacci(num - 2) + fibonacci(num - 3)
+  if(num ===1 || num ===2) {
+  return 1;
+  }
+  return fibonacci(num - 2) + fibonacci(num - 1)
    }
   fibonacci(7)
 
