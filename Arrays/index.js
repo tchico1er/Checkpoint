@@ -40,9 +40,10 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 function pushString(arr) {
   // CODE HERE
-  console.log(arr);
+    
+    arr[arr.length] = 'last element' ;
+    return arr;
 }
-
 /*
 QUESTION 2
 
@@ -59,7 +60,13 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 function push(array, value) {
   // CODE HERE
+ 
+  array[array.length] = value;
+
+  return array;
 }
+
+
 
 /*
 QUESTION 3
@@ -81,6 +88,9 @@ true
 
 function printElements(array) {
   // CODE HERE
+  for(let i=0; i<array.length;i++){
+    console.log(array[i]);
+  }
 }
 
 /*
@@ -110,6 +120,21 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 
 function unique(array) {
   // CODE HERE
+  let newArray =[]
+  for(var i = 0; i < array.length; i++) {
+    let found = false;
+    
+    for(var j = 0; j < newArray.length; j++) {
+      if(array[i] === newArray[j]){
+        found = true
+      }
+    }
+    if(!found){
+      newArray.push(array[i])
+      
+    }
+  }
+  return newArray
 }
 
 /*
@@ -125,7 +150,25 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
+  
+
   // CODE HERE
+  let count = 0;
+  for(let i =0; i< array1.length; i++){
+    for(let j =0; j< array2.length; j++){
+      if(array1[i]=== array2[j]){
+        count++
+        
+      }
+    }
+  }
+  // console.log(array1, array2 +"count "+ count)
+  if(count >= 1){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 /*
@@ -142,6 +185,15 @@ compareArrays([1, 2, 3, 4], [1, 2]) ====> [1, 2]
 
 function compareArrays(array1, array2) {
   // CODE HERE
+  let newArray = [];
+  for(let i=0; i< array1.length; i++){
+    for(let j=0; j<array2.length; j++){
+      if(array1[i] === array2[j]){
+        newArray.push(array1[i])
+      }
+    }
+  }
+    return newArray;
 }
 
 /*
@@ -157,6 +209,21 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 
 function compareArraysOpposite(array1, array2) {
   // CODE HERE
+  let newArray =[]
+  for(let i=0;i < array1.length;i++){
+    let found = false;
+    for(let j=0; j< array2.length; j++){
+        if(array1[i] === array2[j]){
+           found = true;
+        }
+    }
+    if(!found){
+      newArray.push(array1[i])
+    }
+
+  }
+  return newArray;
+  
 }
 
 /*
@@ -182,6 +249,7 @@ retrieveValue(twoDimentionArray, 3, 1) ===> 1
 
 function retrieveValue(arr, row, col) {
   // CODE HERE
+  return arr[row][col];
 }
 
 /*
@@ -212,7 +280,19 @@ createTwoDArray(3, 5) ===> [
 
 function createTwoDArray(row, col) {
   // CODE HERE
+ 
+  let arr = new Array(row);
+
+  for(let i = 0; i < row; i++) {
+      arr[i] = new Array(col);
+      for(let j=0; j < col; j++ ){
+        arr[i][j] =0;
+      }
+  }
+  return arr;
+  
 }
+
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
